@@ -19,7 +19,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 m-5">
             <div *ngFor="let lesson of lessonList" class="p-3 bg-slate-900 text-white text-center rounded-md flex items-center cursor-pointer" routerLink="/lesson/{{lesson.id}}">
                 <div class="w-14 h-14">
-                    <img src="assets/images/math/{{lesson.id}}/_img.svg" class="w-14 h-14">
+                    <img src="assets/images/math/{{lesson.id}}/img.svg" class="w-14 h-14">
                 </div>
                 <div class="flex-auto text-center">
                     <p>{{lesson.name_th}}</p>

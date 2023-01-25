@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1674663798987,
+  "timestamp": 1674664016915,
   "index": "/alpha-ruler/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/alpha-ruler/favicon.ico",
         "/alpha-ruler/index.html",
-        "/alpha-ruler/main.279ba0e0fb33f841.js",
+        "/alpha-ruler/main.9e35c6060a8355d7.js",
         "/alpha-ruler/manifest.webmanifest",
         "/alpha-ruler/polyfills.4ea76b7c6005a8e8.js",
         "/alpha-ruler/runtime.cbdada997a23604d.js",
@@ -126,8 +126,8 @@
     "/alpha-ruler/assets/images/math/natural_number/sub1.svg": "412d923e359ee5e6f0db11f91d2870255121a73c",
     "/alpha-ruler/assets/images/math/natural_number/sub2.svg": "f50465d5c2d5d4c2e2370ea24684c8716a26fe8f",
     "/alpha-ruler/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/alpha-ruler/index.html": "a16a6416f6df229f8ee56d33a52e9a555f25a988",
-    "/alpha-ruler/main.279ba0e0fb33f841.js": "2a8b18c2218bb3899f93deda780acafffa54bd60",
+    "/alpha-ruler/index.html": "9de4bc8e62b9b6b199d4af0948f2f328b3c289bf",
+    "/alpha-ruler/main.9e35c6060a8355d7.js": "f824785b8b16e131379af5694b1cbd3bf6149064",
     "/alpha-ruler/manifest.webmanifest": "6464d799edd08567d790f00de963ef977c884385",
     "/alpha-ruler/polyfills.4ea76b7c6005a8e8.js": "7805004c368c78e319f09d36978ea5e9972a690f",
     "/alpha-ruler/runtime.cbdada997a23604d.js": "07062737de332eb7451df4ceffd852a3a912c8c2",

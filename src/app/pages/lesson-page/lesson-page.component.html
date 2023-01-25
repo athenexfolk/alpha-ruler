@@ -1,0 +1,30 @@
+<div class="">
+    <div class="grid grid-cols-12">
+        <div class="hidden md:block md:col-span-4 lg:col-span-3 h-screen sticky top-0 border-r">
+            <div>
+                <app-menu [lessonSelector]="isLessonSelected" [lessonMenu]="lesson" (sendScrollId)="getScrollId($event)"></app-menu>
+            </div>
+        </div>
+        <div class="col-span-12 md:col-span-8 lg:col-span-9 min-h-screen">
+            <div *ngIf="isLessonSelected ; else notSelect">
+                <div *ngIf="isLessonLegal ; else notLegal">
+                    <app-lesson [legal_lesson]="lesson" [receivedScrollId]="scrollId"></app-lesson>
+                </div>
+                <ng-template #notLegal>
+                    <div class="h-screen flex justify-center items-center">ลิงก์ไม่ถูกต้อง</div>
+                </ng-template>
+            </div>
+            <ng-template #notSelect>
+                <div class="h-screen flex justify-center items-center">กรุณาเลือกบทเรียน</div>
+            </ng-template>
+        </div>
+    </div>
+</div>
+<div class="md:hidden fixed top-0 w-[75vw] h-screen bg-slate-50 z-[20] sidenav">
+    <div>
+        <app-menu [lessonSelector]="isLessonSelected" [lessonMenu]="lesson" (sendScrollId)="getScrollId($event)"></app-menu>
+    </div>
+</div>
+<div class="flex justify-center items-center text-white md:hidden fixed bottom-3 right-3 w-14 h-14 bg-slate-600/[.5] rounded-full cursor-pointer z-[30]" (click)="toggleSideNav()">
+    <mat-icon class="mat-icon">{{sidenav_status}}</mat-icon>
+</div>

@@ -1,1 +1,45 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: MSR;
+    src: url(assets/fonts/MaterialSymbolsRounded.woff2) format('woff');
+}
+@font-face {
+    font-family: comfortaa;
+    src: url(assets/fonts/Comfortaa-Regular.ttf);
+}
+@font-face {
+    font-family: noto;
+    src: url(assets/fonts/NotoSansThai-Regular.ttf);
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: noto, Roboto, "Helvetica Neue", sans-serif; }
+
+.MSR {
+    font-family: 'MSR' !important;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    font-variation-settings: 'FILL' 0, 'wght' 200;
+}
+.mat-icon {
+    width: 48px !important;
+    height: 48px !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+mjx-container[jax="SVG"] > svg{
+    display: unset;
+}

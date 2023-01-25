@@ -1,0 +1,20 @@
+<div class="fixed top-0 w-screen header-wrapper" (scroll)="scrollOnScreen()">
+    <div class="h-14 p-3 flex justify-center items-center bg-white dark:bg-slate-800 gap-x-3 transition hover:bg-slate-50 cursor-pointer head" routerLink="/">
+            <img class="h-full" src="assets/images/logo/logo-fill.svg">
+            <a class="font-[comfortaa] text-xl">AlphaRuler</a>
+    </div>
+    <div class="bg-white dark:bg-slate-800 grid grid-cols-2 shadow-slate-300 dark:shadow-none menu">
+        <div class="flex justify-center items-center hover:bg-slate-100" routerLink="/lesson" routerLinkActive="nav-active">
+            <button>
+                <mat-icon class="mat-icon" fontSet="MSR">local_library</mat-icon>
+            </button>
+            <span class="hidden md:block text-sm">Lesson</span>
+        </div>
+        <div class="flex justify-center items-center hover:bg-slate-100" routerLink="/calculator" routerLinkActive="nav-active">
+            <button>
+                <mat-icon class="mat-icon" fontSet="MSR">calculate</mat-icon>
+            </button>
+            <span class="hidden md:block text-sm">Calculator</span>
+        </div>
+    </div>
+</div>

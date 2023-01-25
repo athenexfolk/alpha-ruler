@@ -1,0 +1,18 @@
+.nav-active{
+    background-color: #0f172a;
+    color: white;
+    cursor: pointer;
+}
+.header-wrapper{
+    z-index: 10;
+}
+.menu,
+.header-wrapper{
+    transition: all .3s;
+}
+.hide-head{
+    top: -56px;
+}
+.hide-head-scroll-down{
+    top: -104px;
+}

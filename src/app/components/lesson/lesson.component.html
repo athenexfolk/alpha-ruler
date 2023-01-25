@@ -1,0 +1,7 @@
+<div class="p-3">
+    <h1 class="text-center text-3xl">{{legal_lesson.name_th}}</h1>
+    <div *ngFor="let content of legal_lesson.content" class="data" id="{{content.id}}">
+        <h4 class="text-xl p-3">{{content.topic}}</h4>
+        <div class="p-5" [mathjax]="content.data"></div>
+    </div>
+</div>

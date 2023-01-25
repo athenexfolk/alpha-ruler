@@ -1,0 +1,7 @@
+.sidenav{
+    left: -100%;
+    transition: all .3s;
+}
+.sidenav-open{
+    left: 0;
+}

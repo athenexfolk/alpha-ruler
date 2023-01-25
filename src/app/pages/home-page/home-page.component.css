@@ -1,0 +1,8 @@
+.logo-wrapper{
+    transform-style: preserve-3d;
+}
+.logo{
+    width: 50%;
+    transform: rotateX(30deg) rotateZ(30deg) scale(0.75);
+    filter: drop-shadow(10px 10px 10px);
+}

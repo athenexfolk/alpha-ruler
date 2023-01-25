@@ -1,0 +1,15 @@
+<div class="p-3 h-screen overflow-y-scroll">
+    <h2 class="text-2xl text-center my-5">รายการบทเรียน</h2>
+    <div *ngIf="lessonSelector ; else notSelect">
+        <div *ngFor="let lesson of lessonMenu.content">
+            <h3 class="text-center text-md cursor-pointer my-3" (click)="scrollToTopic(lesson.id)">{{lesson.topic}}</h3>
+            <hr>
+        </div>
+    </div>
+    <ng-template #notSelect>
+        <div *ngFor="let lesson of lessonList">
+            <h3 class="text-center text-md cursor-pointer my-3" routerLink="/lesson/{{lesson.id}}">{{lesson.name_th}}</h3>
+            <hr>
+        </div>
+    </ng-template>
+</div>

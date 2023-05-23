@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: ibm;
+    src: url('./assets/fonts/IBMPlexSansThai-Regular.ttf');
+}
+
+@font-face {
+    font-family: instruction;
+    src: url('./assets/fonts/Instruction.otf');
+}
+
+body {
+    font-family: ibm;
+}

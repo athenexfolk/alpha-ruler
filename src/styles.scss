@@ -15,3 +15,14 @@
 body {
     font-family: ibm;
 }
+
+html {
+    ::-webkit-scrollbar {
+        width: 0.4rem;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 36px;
+        background: rgba($color: black, $alpha: .5);
+    }
+}

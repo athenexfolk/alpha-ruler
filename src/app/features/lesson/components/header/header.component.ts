@@ -7,7 +7,6 @@ import { menus } from 'src/app/menuList';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-
   isOpen = false
   scrollDelta = 5
   isScrollDelta = false

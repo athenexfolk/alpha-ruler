@@ -1,0 +1,43 @@
+<main class="hidden lg:block h-screen overflow-auto">
+    <div class="p-4">
+        <h4 class="text-2xl font-[instruction] font-bold text-center">AlphaRuler</h4>
+        <nav class="my-4">
+            <ul>
+                <li class="p-2 text-center rounded-lg cursor-pointer hover:bg-slate-100" *ngFor="let menu of menuList" [routerLink]="menu.path" [routerLinkActive]="['bg-slate-50']" [routerLinkActiveOptions]="{exact: true}">
+                    {{menu.name}}
+                </li>
+            </ul>
+        </nav>
+        <nav class="my-4">
+            <ul>
+                <li>Home</li>
+                <li>Lesson</li>
+            </ul>
+        </nav>
+    </div>
+</main>
+
+<button class="lg:hidden fixed left-4 bottom-4 p-2 rounded-full bg-white shadow opacity-50 hover:opacity-100" (click)="openMenu()">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
+      </svg>      
+</button>
+
+<div
+    class="lg:hidden fixed top-0 left-0 right-0 bottom-0 bg-black/25 backdrop-blur p-4"
+    [ngClass]="{'hidden': !isOpen}"
+    >
+    <div class="w-full h-full bg-white rounded-lg shadow relative p-4">
+        <div (click)="closeMenu()" class="absolute top-4 right-4 rounded-full p-2 hover:bg-slate-50">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+        </div>
+        <div class="p-8">
+            <p class="text-xl text-center my-2">Lessons</p>
+            <ul>
+                <li class="cursor-pointer px-4 py-2 text-center rounded-lg hover:bg-slate-100" *ngFor="let menu of menuList" [routerLink]="menu.path" [routerLinkActive]="['bg-slate-50']" [routerLinkActiveOptions]="{exact: true}">{{menu.name}}</li>
+            </ul>
+        </div>
+    </div>
+</div>

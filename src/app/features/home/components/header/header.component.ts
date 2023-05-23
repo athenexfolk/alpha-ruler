@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { menus } from 'src/app/menuList';
 
 @Component({
   selector: 'app-header',
@@ -7,16 +8,11 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  menuList = menus
+
   mobileMenuClasses = {
     'hidden': true
   }
-
-  menuList = [
-    {
-      name: "Home",
-      path: "/home"
-    }
-  ]
 
   openMenu() {
     this.mobileMenuClasses['hidden'] = false

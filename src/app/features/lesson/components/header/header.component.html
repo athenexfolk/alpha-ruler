@@ -1,4 +1,4 @@
-<header class="flex sticky top-0 items-center lg:justify-between px-8 py-4 gap-8 bg-white" [ngClass]="{'shadow' : isScrollDelta}">
+<header class="flex sticky top-0 items-center lg:justify-between px-8 py-4 gap-8 z-10 bg-white/50 backdrop-blur" [ngClass]="{'shadow' : isScrollDelta}">
     <div (click)="openMenu()" class="lg:hidden p-2 rounded-full hover:bg-slate-50">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -27,7 +27,7 @@
   
   <!-- Mobile menu -->
   <div
-    class="lg:hidden fixed top-0 left-0 right-0 bottom-0 bg-black/25 backdrop-blur p-4"
+    class="lg:hidden fixed top-0 left-0 right-0 bottom-0 bg-black/25 backdrop-blur p-4 z-50"
     [ngClass]="{'hidden': !isOpen}"
   >
     <div class="w-full h-full bg-white rounded-lg shadow relative p-4">

@@ -1,4 +1,4 @@
-<main class="hidden lg:block h-screen overflow-auto">
+<main class="hidden lg:block sticky top-0 h-screen overflow-auto">
     <div class="p-4">
         <h4 class="text-2xl font-[instruction] font-bold text-center">AlphaRuler</h4>
         <nav class="my-4">
@@ -10,8 +10,14 @@
         </nav>
         <nav class="my-4">
             <ul>
-                <li>Home</li>
-                <li>Lesson</li>
+                <li *ngFor="let subject of lessonNav">
+                    <p class="text-xs font-bold mb-2">{{subject.nameTH}}</p>
+                    <ul class="text-center">
+                        <li class="cursor-pointer p-2 rounded-lg hover:bg-zinc-100" *ngFor="let lesson of subject.lessons" [routerLink]="[subject.subjectId, lesson.lessonId]">
+                            {{lesson.nameTH}}
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </div>
@@ -24,19 +30,26 @@
 </button>
 
 <div
-    class="lg:hidden fixed top-0 left-0 right-0 bottom-0 bg-black/25 backdrop-blur p-4"
+    class="lg:hidden fixed top-0 left-0 right-0 bottom-0 bg-black/25 backdrop-blur p-4 z-50"
     [ngClass]="{'hidden': !isOpen}"
     >
-    <div class="w-full h-full bg-white rounded-lg shadow relative p-4">
+    <div class="w-full h-full bg-white rounded-lg shadow relative p-4 overflow-y-auto">
         <div (click)="closeMenu()" class="absolute top-4 right-4 rounded-full p-2 hover:bg-slate-50">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                 </svg>
         </div>
         <div class="p-8">
-            <p class="text-xl text-center my-2">Lessons</p>
+            <h3 class="text-xl text-center my-2">Lessons</h3>
             <ul>
-                <li class="cursor-pointer px-4 py-2 text-center rounded-lg hover:bg-slate-100" *ngFor="let menu of menuList" [routerLink]="menu.path" [routerLinkActive]="['bg-slate-50']" [routerLinkActiveOptions]="{exact: true}">{{menu.name}}</li>
+                <li *ngFor="let subject of lessonNav">
+                    <p class="text-xs font-bold mb-2">{{subject.nameTH}}</p>
+                    <ul class="text-center">
+                        <li class="cursor-pointer p-2 rounded-lg hover:bg-zinc-100" *ngFor="let lesson of subject.lessons" [routerLink]="[subject.subjectId, lesson.lessonId]" (click)="closeMenu()">
+                            {{lesson.nameTH}}
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>

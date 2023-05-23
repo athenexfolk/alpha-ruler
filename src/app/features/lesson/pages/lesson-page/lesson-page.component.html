@@ -1,9 +1,9 @@
 <app-header class="lg:hidden"></app-header>
 <main class="grid grid-cols-12">
-    <div class="col-span-12 lg:col-span-3">
+    <div class="col-span-12 lg:col-span-3 z-10">
         <app-navigation></app-navigation>
     </div>
     <div class="col-span-12 lg:col-span-9">
-        <app-content></app-content>
+        <router-outlet></router-outlet>
     </div>
 </main>

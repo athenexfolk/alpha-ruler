@@ -10,12 +10,17 @@
 }
 
 @font-face {
+  font-family: noto;
+  src: url("./assets/fonts/NotoSansThai.ttf");
+}
+
+@font-face {
   font-family: instruction;
   src: url("./assets/fonts/Instruction.otf");
 }
 
 body {
-  font-family: ibm;
+  font-family: noto;
 }
 
 html {

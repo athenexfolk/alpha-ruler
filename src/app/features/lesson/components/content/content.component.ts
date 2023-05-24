@@ -12,7 +12,7 @@ import {
   ImagePathBlock,
   KatexEquation,
   KatexParagraph 
-} from 'src/app/features/lesson/editor'
+} from 'src/app/core/editor'
 
 @Component({
   selector: 'app-content',

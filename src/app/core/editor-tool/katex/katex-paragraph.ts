@@ -97,17 +97,21 @@ export default class KatexParagraph implements BlockTool {
   }
 
   addStyle() {
-    this.wrapperElement.tabIndex = 0
-    this.paragraphElement.addEventListener('focus', () => {
-      this.paragraphElement.style.outline = 'none'
-    })
+    this.wrapperElement.classList.add(
+      'my-2'
+    )
+
+    this.paragraphElement.classList.add(
+      'focus:outline-none'
+    )
 
     this.buttonGroupElement.style.display = this.readOnly ? 'none' : 'flex'
 
-    this.buttonGroupElement.style.justifyContent = 'center'
-    this.buttonGroupElement.style.gap = '4px'
-    this.buttonGroupElement.style.margin = '8px 0'
-
+    this.buttonGroupElement.classList.add(
+      'justify-center',
+      'gap-1',
+      'my-2'
+    )
 
     this.paintButton(this.previewButton)
     this.paintButton(this.editButton)
@@ -121,11 +125,14 @@ export default class KatexParagraph implements BlockTool {
   }
 
   paintButton(button: Button) {
-    button.element.style.padding = '4px 16px'
-    button.element.style.fontSize = '12px'
+    button.element.classList.add(
+      'px-4',
+      'py-1',
+      'text-sm',
+      'rounded-full'
+    )
     button.element.style.color = button.color
     button.element.style.border = '1px '+ button.color +' solid'
-    button.element.style.borderRadius = '100px'
   }
 
   styleDisableButton(button: Button){

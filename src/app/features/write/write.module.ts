@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { WriteRoutingModule } from './write-routing.module';
 import { WritePageComponent } from './pages/write-page/write-page.component';
 import { FormsModule } from '@angular/forms';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     WriteRoutingModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   ]
 })
 export class WriteModule { }

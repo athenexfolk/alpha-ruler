@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./lesson-page.component.scss']
 })
 export class LessonPageComponent {
-
+  lessonNav = [
+    {
+      subjectId: "math",
+      nameTH: "คณิตศาสตร์",
+      lessons: [
+        {
+          lessonId: "counting-number",
+          nameTH: "จำนวนนับ",
+        }
+      ]
+    }
+  ]
 }

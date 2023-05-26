@@ -1,3 +1,17 @@
+<main class="hidden lg:block sticky top-0 h-screen overflow-auto">
+    <div class="p-4">
+        <h4 class="text-2xl font-[instruction] font-bold text-center">AlphaRuler</h4>
+        <nav class="my-4">
+            <ul>
+                <li class="p-2 text-center rounded-lg cursor-pointer hover:bg-slate-100" *ngFor="let menu of menuList" [routerLink]="menu.path" [routerLinkActive]="['bg-slate-50']" [routerLinkActiveOptions]="{exact: true}">
+                    {{menu.name}}
+                </li>
+            </ul>
+        </nav>
+        <ng-content></ng-content>
+    </div>
+</main>
+
 <button class="lg:hidden fixed left-4 bottom-4 p-2 rounded-full bg-white shadow opacity-50 hover:opacity-100" (click)="openMenu()">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
         <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
@@ -13,19 +27,6 @@
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                 </svg>
-        </div>
-        <div class="p-8">
-            <h3 class="text-xl text-center my-2">Lessons</h3>
-            <ul>
-                <li *ngFor="let subject of lessonNav">
-                    <p class="text-xs font-bold mb-2">{{subject.nameTH}}</p>
-                    <ul class="text-center">
-                        <li class="cursor-pointer p-2 rounded-lg hover:bg-zinc-100" *ngFor="let lesson of subject.lessons" [routerLink]="[subject.subjectId, lesson.lessonId]" (click)="closeMenu()">
-                            {{lesson.nameTH}}
-                        </li>
-                    </ul>
-                </li>
-            </ul>
         </div>
     </div>
 </div>

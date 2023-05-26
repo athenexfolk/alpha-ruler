@@ -5,19 +5,19 @@ import { LessonRoutingModule } from './lesson-routing.module';
 import { LessonPageComponent } from './pages/lesson-page/lesson-page.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { ContentComponent } from './components/content/content.component';
-import { HeaderComponent } from './components/header/header.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
   declarations: [
     LessonPageComponent,
     NavigationComponent,
-    ContentComponent,
-    HeaderComponent
+    ContentComponent
   ],
   imports: [
     CommonModule,
-    LessonRoutingModule
+    LessonRoutingModule,
+    SharedModule
   ]
 })
 export class LessonModule { }

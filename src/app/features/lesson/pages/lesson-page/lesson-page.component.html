@@ -1,9 +1,23 @@
 <app-header class="lg:hidden"></app-header>
 <main class="grid grid-cols-12">
-    <div class="col-span-12 lg:col-span-3 z-10">
-        <app-navigation></app-navigation>
+    <div class="col-span-12 lg:col-span-3">
+        <app-sidebar>
+            <nav class="my-4">
+                <ul>
+                    <li *ngFor="let subject of lessonNav">
+                        <p class="text-xs font-bold mb-2">{{subject.nameTH}}</p>
+                        <ul class="text-center">
+                            <li class="cursor-pointer p-2 rounded-lg hover:bg-zinc-100" *ngFor="let lesson of subject.lessons" [routerLink]="[subject.subjectId, lesson.lessonId]">
+                                {{lesson.nameTH}}
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </app-sidebar>
     </div>
     <div class="col-span-12 lg:col-span-9">
         <router-outlet></router-outlet>
     </div>
 </main>
+<app-navigation class="lg:hidden z-10"></app-navigation>

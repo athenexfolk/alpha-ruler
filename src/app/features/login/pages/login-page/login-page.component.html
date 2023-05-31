@@ -1,0 +1,56 @@
+<main class="flex h-screen justify-center items-center bg-slate-50">
+  <div class="bg-white shadow rounded-lg p-4">
+    <form [formGroup]="login" (ngSubmit)="submitLogin()">
+      <h2 class="text-center mb-6">
+        {{ loginLabel.title }}
+      </h2>
+      <div
+        class="flex items-center border border-slate-300 rounded-lg p-2 mb-4"
+      >
+        <div class="text-slate-400">
+          <user-icon></user-icon>
+        </div>
+        <input
+          class="ms-4 h-6 focus:outline-none"
+          type="text"
+          id="username"
+          formControlName="username"
+          [placeholder]="loginLabel.username"
+          required
+        />
+      </div>
+      <div
+        class="flex items-center border border-slate-300 rounded-lg p-2 mb-4"
+      >
+        <div class="text-slate-400">
+          <key-icon></key-icon>
+        </div>
+        <input
+          class="ms-4 h-6 focus:outline-none"
+          type="password"
+          id="password"
+          formControlName="password"
+          [placeholder]="loginLabel.password"
+          required
+        />
+      </div>
+      <p
+        class="text-xs text-red-500 mb-4"
+        [ngClass]="{ invisible: !isShowMessage }"
+      >
+        {{ message }}
+      </p>
+      <div>
+        <input
+          class="w-full cursor-pointer px-4 py-2 rounded-lg text-center bg-blue-500 text-white hover:bg-blue-700"
+          type="submit"
+          [value]="loginLabel.submit"
+        />
+      </div>
+    </form>
+
+    <div class="mt-6">
+      <a class="underline text-sm text-blue-500" routerLink="">กลับหน้าหลัก</a>
+    </div>
+  </div>
+</main>

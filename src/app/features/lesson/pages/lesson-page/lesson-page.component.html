@@ -1,0 +1,14 @@
+<app-header class="lg:hidden"></app-header>
+<main class="grid grid-cols-12">
+  <div class="col-span-12 lg:col-span-3">
+    <app-sidebar>
+      <app-navigation [lessonMap]="lessonMap"></app-navigation>
+    </app-sidebar>
+  </div>
+  <div class="col-span-12 lg:col-span-9">
+    <router-outlet></router-outlet>
+  </div>
+</main>
+<app-mobile-nav class="lg:hidden">
+  <app-navigation [lessonMap]="lessonMap"></app-navigation>
+</app-mobile-nav>

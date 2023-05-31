@@ -17,6 +17,16 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "katex",
+              "extract-math",
+              "@editorjs/editorjs",
+              "@editorjs/header",
+              "@editorjs/delimiter",
+              "@editorjs/table",
+              "@editorjs/nested-list",
+              "@editorjs/inline-code"
+            ],
             "outputPath": "dist/alpha-ruler",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -100,5 +110,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

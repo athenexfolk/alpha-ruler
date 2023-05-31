@@ -1,1 +1,63 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'katex/dist/katex.css';
+
+@font-face {
+  font-family: noto;
+  src: url("./assets/fonts/NotoSansThai.ttf");
+}
+
+@font-face {
+  font-family: instruction;
+  src: url("./assets/fonts/Instruction.otf");
+}
+
+body {
+  font-family: noto, sans-serif;
+}
+
+html {
+  overflow-y: scroll;
+
+  ::-webkit-scrollbar {
+    width: 0.4rem;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 36px;
+    background: rgba($color: black, $alpha: 0.5);
+  }
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: bolder;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: bolder;
+}
+
+h3 {
+  font-size: 1.17em;
+  font-weight: bolder;
+}
+
+h4 {
+  font-size: 1em;
+  font-weight: bolder;
+}
+
+h5 {
+  font-size: 0.83em;
+  font-weight: bolder;
+}
+
+h6 {
+  font-size: 0.67em;
+  font-weight: bolder;
+}
+

@@ -1,0 +1,19 @@
+[
+  {
+    "subjectId": "math",
+    "subjectNameEN": "Mathematics",
+    "subjectNameTH": "คณิตศาสตร์",
+    "lessons": [
+      {
+        "lessonId": "counting-number",
+        "lessonNameEN": "Counting number",
+        "lessonNameTH": "จำนวนนับ"
+      },
+      {
+        "lessonId": "integer",
+        "lessonNameEN": "Integer",
+        "lessonNameTH": "จำนวนเต็ม"
+      }
+    ]
+  }
+]

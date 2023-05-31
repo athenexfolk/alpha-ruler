@@ -1,0 +1,19 @@
+<nav class="my-4">
+  <ul>
+    <li *ngFor="let subject of lessonMap">
+      <p class="text-xs font-bold mb-2">
+        {{subject.subjectNameTH}}
+      </p>
+      <ul class="text-center">
+        <li class="cursor-pointer p-2 rounded-lg hover:bg-sky-200"
+            *ngFor="let lesson of subject.lessons"
+            [routerLink]="[subject.subjectId, lesson.lessonId]"
+            [routerLinkActive]="['bg-sky-100']"
+            (click)="sendClick()"
+        >
+          {{lesson.lessonNameTH}}
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>

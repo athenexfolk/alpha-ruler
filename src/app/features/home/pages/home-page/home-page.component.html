@@ -1,0 +1,26 @@
+<app-header class="lg:hidden"></app-header>
+<main class="grid grid-cols-12">
+  <div class="col-span-12 lg:col-span-3 z-10">
+    <app-sidebar></app-sidebar>
+  </div>
+  <div class="col-span-12 lg:col-span-9">
+    <section class="h-screen flex flex-col lg:flex-row items-center gap-8 p-8">
+      <div class="p-4">
+        <img ngSrc="assets/images/logo/logo.svg"
+             width="500"
+             height="500"
+             alt="logo"
+             priority
+        >
+      </div>
+      <div class="flex flex-col justify-center gap-4">
+        <h1 class="text-3xl sm:text-4xl lg:text-6xl">
+          {{title}}
+        </h1>
+        <p class="text-xl">
+          {{description}}
+        </p>
+      </div>
+    </section>
+  </div>
+</main>

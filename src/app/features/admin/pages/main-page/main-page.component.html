@@ -1,0 +1,27 @@
+<main class="p-4">
+  <div class="">
+    <div class="p-4">
+      <div class="w-24 h-24 shadow rounded-lg"></div>
+    </div>
+    <hr>
+    <div class="p-4">
+      Hello
+      <div *ngFor="let subject of nav">
+        <p>{{subject.subjectNameTH}}</p>
+        <div *ngFor="let lesson of subject.lessons"
+             class="w-24 h-24 shadow rounded-lg">
+          {{lesson.lessonNameTH}}
+        </div>
+      </div>
+    </div>
+  </div>
+<!--  <div>-->
+<!--    <input class="block px-4 py-3 my-3 w-full text-lg border rounded-lg focus:outline-0"-->
+<!--           placeholder="ชื่อเรื่อง"-->
+<!--           [(ngModel)]="titleTH">-->
+<!--    <input class="block px-4 py-3 my-3 w-full text-lg border rounded-lg focus:outline-0"-->
+<!--           placeholder="Title"-->
+<!--           [(ngModel)]="titleEN">-->
+<!--  </div>-->
+<!--  <div id="editorjs"></div>-->
+</main>

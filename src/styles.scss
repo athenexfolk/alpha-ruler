@@ -1,1 +1,36 @@
-/* You can add global styles to this file, and also import other style files */
+@import "bootstrap/scss/bootstrap";
+@import 'katex/dist/katex.css';
+
+@font-face {
+  font-family: comfortaa;
+  src: url("assets/fonts/Comfortaa-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: noto;
+  src: url("assets/fonts/NotoSansThai-VariableFont_wdth,wght.ttf");
+}
+body {
+  font-family: noto, sans-serif;
+}
+.comfortaa {
+  font-family: comfortaa, sans-serif;
+}
+.katex-wrapper {
+  position: relative;
+  padding: 4px;
+
+  .katex-e-display {
+    text-align: center;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .hide {
+    display: none;
+  }
+}
+
+.inline-katex {
+  font-family: KaTeX_Main, serif;
+  font-size: 1.21em;
+}

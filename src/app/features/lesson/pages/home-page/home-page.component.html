@@ -1,12 +1,15 @@
 <main class="p-3 min-vh-100">
-  <section class="text-center">
+  <section class="text-center d-flex flex-column justify-content-center">
     <img class="mx-auto d-block" ngSrc="assets/images/logo/banner.svg" width="250" height="250" sizes="20vw" priority="true" alt="banner">
-    <h1 class="display-5 fw-bold text-body-emphasis">Centered hero</h1>
+    <h1 class="display-5 fw-bold text-body-emphasis">
+      {{heroText}}
+    </h1>
     <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+      <p class="lead mb-4">
+        {{description}}
+      </p>
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-        <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
-        <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
+        <button type="button" class="btn btn-primary btn-lg px-4 gap-3" [routerLink]="['math/counting-number']">Get started</button>
       </div>
     </div>
   </section>

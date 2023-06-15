@@ -9,7 +9,12 @@ import {Content} from "../../models/content";
 })
 export class LessonService {
 
-  private _PATH: string = "/assets/data/document"
+
+  //production URL
+  private _PATH: string = "/alpha-ruler/assets/data/document"
+
+  //development URL
+  // private _PATH: string = "/assets/data/document"
 
   private _CONTENTS_PATH_OF = (subjectId: string, lessonId: string) => `${this._PATH}/${subjectId}/${lessonId}.json`
   private _MAP_PATH = `${this._PATH}/lesson-map.json`

@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import {CoreModule} from "./core/core.module";
 import {HttpClientModule} from "@angular/common/http";
 import { ServiceWorkerModule } from '@angular/service-worker';
-import {APP_BASE_HREF} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -24,7 +23,7 @@ import {APP_BASE_HREF} from "@angular/common";
       registrationStrategy: 'registerWhenStable:30000'
     })
   ],
-  providers: [{provide: APP_BASE_HREF, useValue: ''}],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

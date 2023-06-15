@@ -10,6 +10,7 @@ import NestedList from '@editorjs/nested-list'
 import InlineCode from '@editorjs/inline-code'
 import KatexEquation from "../../../../core/tool/katex-equation";
 import KatexInline from "../../../../core/tool/katex-inline";
+import {Meta, Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-lesson-page',
@@ -17,6 +18,7 @@ import KatexInline from "../../../../core/tool/katex-inline";
   styleUrls: ['./lesson-page.component.scss']
 })
 export class LessonPageComponent {
+  title = ' - AlphaRuler'
   editor!: EditorJS
 
   content: Content = {
@@ -31,6 +33,8 @@ export class LessonPageComponent {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
+    private titleService: Title,
+    private meta: Meta,
     private lessonService: LessonService
   ){}
 
@@ -46,6 +50,11 @@ export class LessonPageComponent {
             this.editor.isReady.then(()=>{
               this.editor.blocks.render(this.content.data).then()
             })
+            this.titleService.setTitle(this.content.nameTH + this.title)
+            this.meta.addTags([
+              { name: 'description', content: 'This is an article about '+this.content.nameEN },
+              { name: 'keywords', content: this.content.contentId+','+this.content.nameEN+','+this.content.nameTH }
+            ])
           },
           error: err => {
             if (err.status==404){
